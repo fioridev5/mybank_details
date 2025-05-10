@@ -1,6 +1,58 @@
 <mvc:View controllerName="com.sap.mybankdetailsa.controller.App"
-    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
     xmlns="sap.m">
+    <App id="app">
     <Page id="page" title="{i18n>title}">
+    <headerContent>
+    <Button id="idDialogRefresh" text="{i18n>homeText}" type="Emphasized"  class="sapUiSmallMarginEnd"></Button> 
+    
+    </headerContent>
+    <content>
+
+    <core:Fragment id="idBankFrgment" fragmentName="com.sap.mybankdetailsa.view.fragments.BankDetails" type="XML"/>
+<Button id="idDialogOpen" text="{i18n>findMoreDetails}" type="Neutral" class="sapUiSmallMarginBegin" press=".onOpenBankDetails"></Button>
+  
+  <Panel id="mypnl" expandable="true" headerText="{i18n>CardInfo}" width="auto" class="sapUiResponsiveMargin">
+		<content>
+			
+            	<List
+		id="myList"				
+		items="">
+		<items>
+			<StandardListItem id="card1"
+				title="Master Card (12345677890)"
+				description="Debit card : assigned on 23 Aug 2021"
+				icon="sap-icon://pharmacy"
+				iconInset="false"
+				highlight="Success"
+				info="Active"
+				infoState="Information"
+				infoStateInverted="true" />
+
+                <StandardListItem id="card2"
+				title="Visa Card (12345677890)"
+				description="Debit card : assigned on 23 Aug 2022"
+				icon="sap-icon://pharmacy"
+				iconInset="false"
+				highlight="Error"
+				info="Expired"
+				infoState="Error"
+				infoStateInverted="true" />
+
+                  <StandardListItem id="card3"
+				title="Visa Card (1234567789cc0)"
+				description="Debit card : assigned on 23 Aug 2023"
+				icon="sap-icon://pharmacy"
+				iconInset="false"
+				highlight="Success"
+				info="Active"
+				infoState="Success"
+				infoStateInverted="true" />
+		</items>
+	</List>
+		</content>
+	</Panel>
+    </content>
     </Page>
+      </App>
 </mvc:View>

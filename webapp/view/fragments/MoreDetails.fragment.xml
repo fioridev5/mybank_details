@@ -1,0 +1,49 @@
+<core:FragmentDefinition xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+ 
+ <Dialog id="idDialog" title="{i18n>MyConfidentialDetails}" class="sapUiSmallMarginEnd">
+
+<VBox id="vBox2" class="sapUiSmallMargin">
+    <Title text="{i18n>MyAccDeteails}" id="accDetailsM" level="H1"/>
+    <HBox id="idHboxA">
+
+<Label text="{i18n>BAccNum}:" id="bankAccNum1" class="sapUiSmallMarginEnd"/>
+<Text text="2345656*****" id="bankAccVal1"/> 
+
+</HBox>
+
+ <HBox id="idHboxB">
+
+<Label text="{i18n>AccHldNum}:" id="BankHldName1" class="sapUiSmallMarginEnd"/>
+<Text text="Mallikarjuna Beerappagari" id="bnkHldName1"/> 
+
+</HBox>
+
+ <HBox id="idHboxC">
+
+<Label text="{i18n>MDIFSC} :" id="bankIfscCode1" class="sapUiSmallMarginEnd"/>
+<Text text="88888888*****" id="bankIfccode1"/> 
+
+</HBox>
+    
+
+ <HBox id="idHboxD">
+
+<Label text="{i18n>MDCustDe}:" id="bankCustomerD" class="sapUiSmallMarginEnd"/>
+<Text text="88888888*****" id="bankIfccodeD"/> 
+
+</HBox>
+
+ <HBox id="idHboxE">
+
+<Label text="{i18n>MDAddr}:" id="addressE" class="sapUiSmallMarginEnd"/>
+<Text text="45667889*******" id="addressET"/> 
+
+</HBox>
+
+</VBox>
+<beginButton>
+<Button id="dialogID" text="Close" press=".onPressCloseDialog"/>
+</beginButton>
+ </Dialog>
+</core:FragmentDefinition>
